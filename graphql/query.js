@@ -21,3 +21,25 @@ query AllPosts {
       }
 }
 `
+
+export const PostQuery = gql`
+query Post($id: ID!) {
+      post(id: $id){
+            data{
+                  id
+                  attributes{
+                        Title
+                        Content
+                        Image {
+                              data {
+                                    attributes {
+                                          caption
+                                    }
+                              }
+                        }
+                        updatedAt
+                  }
+            }
+      }
+}
+`
