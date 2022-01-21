@@ -1,12 +1,11 @@
 <template>
-<!-- <div></div> -->
-    <PostCard :posts="posts"/>
-    <!-- <Tutorial /> -->
+    <PostList :posts="posts"/>
 </template>
 
 <script>
 
     import {AllPostsQuery} from "../graphql/query";
+    import PostList from './../components/PostList.vue'
 
     export default {
         name: "IndexPage",
@@ -20,6 +19,9 @@
                 prefetch: true,
                 query: AllPostsQuery,
             }
+        }, 
+        components:{
+            PostList
         }
     };
 
