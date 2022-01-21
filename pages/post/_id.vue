@@ -1,5 +1,5 @@
 <template>
-    <h1>post.attributes.Title</h1>
+    <h1>{{post.attributes.Title}}</h1>
 </template>
 
 <script>
@@ -14,7 +14,7 @@
             console.log(this.post);;
         },
         apollo: {
-            event: {
+            post: {
             prefetch: true,
             query: PostQuery,
             variables () {

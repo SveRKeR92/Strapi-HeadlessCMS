@@ -1,6 +1,6 @@
 <template>
     <article>
-        <h1>{{post.data}}</h1>
+        <h1>{post.data.attributes.Title}</h1>
     </article>
 </template>
 
