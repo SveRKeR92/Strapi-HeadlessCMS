@@ -11,8 +11,8 @@ query AllPosts {
                         Image {
                               data {
                                     attributes {
-                                          caption
-                                    }
+                                          url
+                                          caption                                    }
                               }
                         }
                         updatedAt
@@ -33,6 +33,7 @@ query Post($id: ID!) {
                         Image {
                               data {
                                     attributes {
+                                          url
                                           caption
                                     }
                               }

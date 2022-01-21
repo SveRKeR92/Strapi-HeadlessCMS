@@ -1,9 +1,12 @@
 <template>
-    <h1>{{post.data.attributes.Title}}</h1>
+    <div>
+        <span>{{post.data}}</span>
+        <h1>{{post.data}}</h1>
+        <!-- <img :src="post.data.attributes.Image.data.attributes.url" :alt="post.data.attributes.Image.data.attributes.caption"> -->
+    </div>
 </template>
 
 <script>
-// console.log(parseInt(this.$route.params.id))
     import {PostQuery} from '../../graphql/query'
     export default {
         data() {
@@ -12,7 +15,7 @@
             }
         },
         mounted () {
-            console.log(this.post);;
+            console.log(this.post);
         },
         apollo: {
             post: {
