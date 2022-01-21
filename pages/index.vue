@@ -5,7 +5,7 @@
 <script>
 
     import {AllPostsQuery} from "../graphql/query";
-    import PostList from './../components/PostList.vue'
+    // import PostList from './../components/PostList.vue'
 
     export default {
         name: "IndexPage",
@@ -20,9 +20,9 @@
                 query: AllPostsQuery,
             }
         }, 
-        components:{
-            PostList
-        }
+        // components:{
+        //     PostList
+        // }
     };
 
 
