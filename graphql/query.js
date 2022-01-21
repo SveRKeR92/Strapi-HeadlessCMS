@@ -11,7 +11,7 @@ query AllPosts {
                         Image {
                               data {
                                     attributes {
-                                          caption
+                                          url
                                     }
                               }
                         }
@@ -43,3 +43,4 @@ query Post($id: ID!) {
       }
 }
 `
+
