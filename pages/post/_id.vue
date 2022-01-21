@@ -1,7 +1,9 @@
 <template>
-    <div>
+    <div>   
+            <span>{{post.data}}</span>
             <h1>{{post.data.attributes.Title}}</h1>
-    <p>{{post.data.attributes}}</p>
+            <p>{{post.data.attributes}}</p>
+            <!-- mettre en commentaire h1 et p pour voir de la data apparaitre comme par magie c: -->
     </div>
 </template>
 
