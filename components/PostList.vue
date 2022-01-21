@@ -1,8 +1,9 @@
 <template>
     <section>
-        <NuxtLink to="{name: 'post-id', params: {id: post.id}}" v-for="post in posts.data" :key="post.id">
+        <NuxtLink :to="{name: 'post-id', params: {id: post.id}}" v-for="post in posts.data" :key="post.id">
             <!-- <PostCard/> -->
             <div>
+                {{post.id}}
                 {{post.attributes.Title}}
             </div>
             <br>
