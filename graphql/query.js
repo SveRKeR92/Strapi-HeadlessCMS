@@ -13,6 +13,7 @@ query AllPosts {
                                     attributes {
                                           url
                                           caption                                    }
+                                    }
                               }
                         }
                         updatedAt
