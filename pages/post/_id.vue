@@ -1,8 +1,9 @@
 <template>
-    <h1>post.attributes.Title</h1>
+    <h1>{{post.data.attributes.Title}}</h1>
 </template>
 
 <script>
+// console.log(parseInt(this.$route.params.id))
     import {PostQuery} from '../../graphql/query'
     export default {
         data() {
@@ -14,7 +15,7 @@
             console.log(this.post);;
         },
         apollo: {
-            event: {
+            post: {
             prefetch: true,
             query: PostQuery,
             variables () {
