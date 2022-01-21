@@ -1,8 +1,10 @@
 <template>
-    <div>
-            <h1>{{post.data.attributes.Title}}</h1>
-    <p>{{post.data.attributes}}</p>
-    </div>
+<div>
+        <h1>{{post.data.attributes.Title}}</h1>
+
+    <p>{{post.data.attributes.Content}}</p>
+    <img :src="post.data.attributes.Image.data.attributes.url" alt="">
+</div>
 </template>
 
 <script>
@@ -21,8 +23,7 @@
             prefetch: true,
             query: PostQuery,
             variables () {
-                return { id: parseInt(this.$route.params.id),
-                          }
+                return { id: parseInt(this.$route.params.id), }
             }
             }
         },
