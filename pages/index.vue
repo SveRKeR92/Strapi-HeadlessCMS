@@ -4,16 +4,26 @@
 
 <script>
 
-    // import {AllPostsQuery} from "../graphql/query";
+    import {AllPostsQuery} from "../graphql/query";
     import PostList from './../components/PostList.vue'
 
-export default {
-    props: ["posts"],
-    components:{
-        PostList
-    },
-
-}
+    export default {
+        name: "IndexPage",
+        data(){
+            return{
+                posts: [],
+            }
+        },
+        apollo: {
+            posts:{
+                prefetch: true,
+                query: AllPostsQuery,
+            }
+        }, 
+        components:{
+            PostList
+        }
+    };
 
 
 </script>
